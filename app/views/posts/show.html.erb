@@ -1,0 +1,15 @@
+<%= link_to image_tag(@post.image.url(:medium)),@post.image.url %>
+<br />
+<br />
+<%= @post.description %>
+<%= link_to like_post_path(@post), method: :put, class: "btn btn-primary" do %>
+
+<i class="fa fa-thumbs-up">  <%= @post.get_upvotes.size %></i>
+
+<% end %>
+
+<%= link_to unlike_post_path(@post), method: :put, class: "btn btn-primary" do %> 
+<i class="fa fa-thumbs-down">  <%= @post.get_downvotes.size %></i>
+
+<% end %>
+

@@ -1,0 +1,4 @@
+<%= link_to like_post_path(post), method: :put, class: "btn btn-success btn-sm",remote: true do %>
+
+<i class="fa fa-thumbs-up">  <%= post.get_upvotes.size %></i>
+<% end %>
